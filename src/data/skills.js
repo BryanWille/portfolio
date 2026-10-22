@@ -1,0 +1,91 @@
+export const skillsMatrixData = [
+  {
+    id: "web-saas",
+    index: "DOMÍNIO 01",
+    category: "Arquitetura Web & SaaS Full-Stack",
+    description:
+      "Construção de aplicações web modernas, reativas e orientadas a produto com renderização híbrida, bancos relacionais e integrações via Webhooks.",
+    skills: [
+      "JavaScript (ES6+)",
+      "Next.js (App Router & Server Actions)",
+      "React",
+      "Tailwind CSS",
+      "Supabase (PostgreSQL / Auth / SSR)",
+      "REST APIs & Webhooks",
+      "Google Apps Script",
+      "HTML5 & CSS3",
+      "Flutter & Dart",
+      "Cloud Firestore",
+    ],
+  },
+  {
+    id: "ai-data-mlops",
+    index: "DOMÍNIO 02",
+    category: "Engenharia de IA, Dados & MLOps",
+    description:
+      "Orquestração de pipelines de dados resilientes, modelagem em camadas Medalhão, engenharia de atributos e inferência preditiva em produção.",
+    skills: [
+      "Python 3",
+      "Prefect (Workflow Orchestration)",
+      "Scikit-Learn & Joblib",
+      "Arquitetura Medalhão (Bronze / Silver / Gold SQL)",
+      "Feature Engineering",
+      "Visão Computacional (CIFAR)",
+      "PostgreSQL & SQL Server",
+      "Google Data Studio",
+      "Microsoft Power BI",
+    ],
+  },
+  {
+    id: "enterprise-crm-erp",
+    index: "DOMÍNIO 03",
+    category: "Sistemas Corporativos, CRM & ERP",
+    description:
+      "Arquitetura e sustentação de ecossistemas corporativos de missão crítica em escala nacional e global para Varejo, Saúde e Energia.",
+    skills: [
+      "Salesforce Platform",
+      "Apex",
+      "Lightning Web Components (LWC)",
+      "SOQL",
+      "Flow Builder",
+      "Credenciais Nomeadas",
+      "Gestão de Mudanças (GMUD)",
+      "Omie ERP Integration",
+      "Zoho Creator (Deluge)",
+      "Pixeon Smart",
+    ],
+  },
+  {
+    id: "quality-devops-infra",
+    index: "DOMÍNIO 04",
+    category: "Qualidade, Testes, DevOps & Infraestrutura",
+    description:
+      "Testes automatizados baseados em propriedades, containerização reprodutível, infraestrutura como código e administração de servidores.",
+    skills: [
+      "Pytest & ipytest",
+      "Hypothesis (Property-Based Testing)",
+      "Docker & Docker Compose",
+      "Terraform (IaC)",
+      "GitHub Actions (CI/CD)",
+      "AWS (S3, Lambda, Cloud Foundations)",
+      "Netlify",
+      "Linux (Debian, Samba, Redes)",
+      "Windows Server, Hyper-V & Active Directory",
+    ],
+  },
+  {
+    id: "cs-compiled",
+    index: "DOMÍNIO 05",
+    category: "Ciência da Computação & Linguagens Compiladas",
+    description:
+      "Fundamentos clássicos de computação, algoritmos de compressão sem perdas, estruturas de dados avançadas e interoperabilidade nativa.",
+    skills: [
+      "Java SE & Java Swing",
+      "C++",
+      "C# (.NET / Visual Studio)",
+      "Estruturas de Dados (Árvores, Hash, Heaps, Grafos)",
+      "Compressão Sem Perdas (LZW & PGM)",
+      "Análise Experimental de Algoritmos",
+    ],
+  },
+];
