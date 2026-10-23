@@ -1,65 +1,34 @@
-# Bryan Wille Souto Braga — Portfólio Profissional
+# Bryan Wille — Portfólio Profissional
 
-Aplicação web do portfólio executivo e de engenharia de **Bryan Wille Souto Braga** — Cientista da Computação, Analista de Sistemas Pleno II na **Deloitte Consulting** e Pós-graduando em Engenharia de Inteligência Artificial e MLOps pela **PUC Minas**.
+Portfólio executivo e técnico de Bryan Wille Souto Braga, Analista de Sistemas
+Pleno II na Deloitte Consulting, Cientista da Computação e pós-graduando em
+Engenharia de Inteligência Artificial e MLOps na PUC Minas.
 
----
+## Tecnologias e direção de arte
 
-## 1. Arquitetura & Stack Técnica
+- Next.js 14 com App Router e React.
+- JavaScript ES6+ em arquivos `.js` e `.jsx`; sem TypeScript.
+- Tailwind CSS 3.4, Lucide React e Framer Motion para transições discretas.
+- Tipografia Inter e JetBrains Mono via `next/font/google`.
+- Interface exclusivamente Light Mode, com direção visual editorial e paleta
+  off-white, branco, grafite, azul cobalto e verde floresta.
 
-- **Framework:** Next.js 14 (App Router)
-- **Linguagem:** 100% JavaScript Puro (ES6+ com `.js` / `.jsx` e `jsconfig.json` — Zero TypeScript)
-- **Estilização:** Tailwind CSS 3.4
-- **Tipografia (`next/font/google`):** `Plus Jakarta Sans` (títulos e leitura) + `JetBrains Mono` (metadados técnicos, tags e métricas)
-- **Ícones & Animações:** `lucide-react` & `framer-motion`
-- **Direção de Arte:** Editorial Suíço & Exclusivamente Light Mode (`#FAFAFA` Off-White, `#FFFFFF` Superfícies, `#E5E7EB` Bordas, `#111827` Grafite, `#4B5563` Ardósia, `#2563EB` Azul Cobalto e `#0F5338` Verde Floresta Editorial)
+## Organização do projeto
 
----
+- `src/app/`: layout, página inicial e estilos globais.
+- `src/components/`: navegação e seções de trajetória, projetos, laboratório,
+  publicações e competências.
+- `src/data/`: conteúdo de perfil, experiência, projetos, publicações e skills.
 
-## 2. Estrutura de Diretórios
+O conteúdo das publicações foi associado aos links curtos do LinkedIn após
+conferência dos destinos públicos. As descrições técnicas são baseadas nos
+arquivos de projeto e nas informações profissionais fornecidas.
 
-```text
-├── jsconfig.json
-├── next.config.mjs
-├── netlify.toml
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-└── src/
-    ├── app/
-    │   ├── globals.css
-    │   ├── layout.jsx
-    │   └── page.jsx
-    ├── components/
-    │   ├── Navbar.jsx
-    │   ├── HeroSection.jsx
-    │   ├── ExperienceSection.jsx
-    │   ├── FlagshipProjectsSection.jsx
-    │   ├── EngineeringLabSection.jsx
-    │   ├── PublicationsSection.jsx
-    │   ├── SkillsMatrixSection.jsx
-    │   └── Footer.jsx
-    └── data/
-        ├── profile.js
-        ├── experience.js
-        ├── projects.js
-        ├── publications.js
-        └── skills.js
-```
-
----
-
-## 3. Execução Local & Build de Produção
+## Desenvolvimento e build
 
 ```bash
-# Instalar dependências
 npm install
-
-# Executar servidor de desenvolvimento
 npm run dev
-
-# Gerar build otimizada de produção
 npm run build
-
-# Iniciar servidor de produção
 npm run start
 ```

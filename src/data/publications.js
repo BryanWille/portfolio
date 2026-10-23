@@ -1,57 +1,52 @@
 export const publicationsData = [
   {
-    id: "pub-noobie",
+    id: "pub-br381-mlops",
     index: "01",
     code: "dUfRCiJ7",
-    title:
-      "Arquitetura do Noobie: Gestão Financeira com Next.js, Supabase e Sincronização Google Sheets",
-    tag: "Engenharia de Produto · FinTech SaaS",
+    title: "BR-381: dados, clima e previsão de risco em uma pipeline MLOps",
+    tag: "Engenharia de dados · MLOps",
     summary:
-      "Bastidores técnicos da construção do motor de Saldo Livre Real, modelagem PostgreSQL e sincronização automatizada via Webhooks e Google Apps Script.",
+      "Apresentação do projeto acadêmico que integra dados da PRF, arquitetura Medallion, enriquecimento meteorológico, modelo Random Forest e alertas via Telegram, com orquestração Prefect.",
     url: "https://lnkd.in/p/dUfRCiJ7",
   },
   {
-    id: "pub-bookie",
+    id: "pub-tcc-lstm",
     index: "02",
     code: "diY7m2sR",
-    title:
-      "Bookie em Produção: Biblioteca Virtual, Caderno Markdown e Server Actions no Next.js",
-    tag: "Full-Stack Web · Design Editorial",
+    title: "TCC aprovado: redes LSTM para análise de tendências de ativos",
+    tag: "Pesquisa acadêmica · Inteligência artificial",
     summary:
-      "Como estruturar uma plataforma de leitura ativa e retenção literária combinando estética minimalista, @supabase/ssr e edição estruturada de notas e citações.",
+      "Trabalho de conclusão de curso sobre o uso de redes recorrentes LSTM para analisar tendências em ações, criptomoedas e Forex e apoiar a identificação de padrões de mercado.",
     url: "https://lnkd.in/p/diY7m2sR",
   },
   {
-    id: "pub-br381",
+    id: "pub-aws-image",
     index: "03",
     code: "dQy-vb3i",
-    title:
-      "Pipeline Preditivo na BR-381: Arquitetura Medalhão, Prefect e Machine Learning em Produção",
-    tag: "Engenharia de IA · MLOps & Dados",
+    title: "AWS Lambda e S3 para reduzir o espaço ocupado por imagens",
+    tag: "Cloud · Python · Automação",
     summary:
-      "Do dado bruto da PRF e enriquecimento meteorológico via Open-Meteo até a Feature Store em PostgreSQL e alertas automatizados de risco rodoviário.",
+      "Relato de uma solução para armazenar e compactar imagens de checklists: Lambda recebe a solicitação, processa a imagem com Pillow e a grava no S3. Os testes descritos reportaram redução de até 87,89% no tamanho do bucket.",
     url: "https://lnkd.in/p/dQy-vb3i",
   },
   {
-    id: "pub-salesforce-tma",
+    id: "pub-twiks",
     index: "04",
     code: "dc8JSgtJ",
-    title:
-      "Engenharia em Escala Corporativa: Reduzindo o TMA em 20% com Arquitetura Salesforce e Integrações",
-    tag: "Sistemas Corporativos · Case de Impacto",
+    title: "Twiks: estudo de análise de dados a partir da API do Twitter",
+    tag: "Estudo aplicado · Dados",
     summary:
-      "Lições práticas sobre desenvolvimento de sistemas críticos de atendimento (CSC), componentes LWC, automações Apex e governança de deploys em grandes operações.",
+      "Projeto de estudo com Tweepy, Python, Firestore e bibliotecas de análise e visualização para coletar, persistir e explorar dados em JSON e tweets.",
     url: "https://lnkd.in/p/dc8JSgtJ",
   },
   {
-    id: "pub-cs-mlops",
+    id: "pub-presp",
     index: "05",
     code: "d3AN_eXW",
-    title:
-      "Da Ciência da Computação à Pós em Engenharia de IA e MLOps: A Base que Sustenta Sistemas Complexos",
-    tag: "Trajetória Acadêmica · Computação & IA",
+    title: "PresP: calculadora gráfica de Estatística Descritiva em Java",
+    tag: "Ciência da Computação · Java",
     summary:
-      "Como o domínio de algoritmos, estruturas de dados, compressão sem perdas e testes automatizados conecta a Ciência da Computação aos desafios de MLOps na PUC Minas.",
+      "Projeto acadêmico em dupla que levou os cálculos de Estatística Descritiva para uma interface gráfica desenvolvida em Java Swing.",
     url: "https://lnkd.in/p/d3AN_eXW",
   },
 ];
