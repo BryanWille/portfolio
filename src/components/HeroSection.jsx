@@ -9,6 +9,7 @@ import {
   Mail,
 } from "lucide-react";
 import { profileData } from "@/data/profile";
+import CodeToValueBackground from "./CodeToValueBackground";
 
 export default function HeroSection() {
   const { links, email } = profileData;
@@ -17,8 +18,14 @@ export default function HeroSection() {
     "https://media.licdn.com/dms/image/v2/D4D03AQFNLkguL7Db-A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1706217771950?e=1794441600&v=beta&t=-Tnr_UeLln0R0Jxt3HA9BvE3KGPwCKiZrQM_MU-Nd8U";
 
   return (
-    <section id="inicio" className="bg-[#FAFAFA] pt-12 pb-16 sm:pt-20 sm:pb-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section
+      id="inicio"
+      className="relative bg-[#FAFAFA] pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden"
+    >
+      {/* Animação de fundo sutil: Código se transformando em Valor */}
+      <CodeToValueBackground />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* 2 Colunas Limpas: Apresentação na Esquerda + Foto na Direita */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Coluna Esquerda: Texto Claro, Humano e Direto */}
@@ -39,13 +46,12 @@ export default function HeroSection() {
             </p>
 
             {/* Chamada única e direta antes dos botões */}
-            <p className="text-neutral-600 text-base md:text-lg">
-              Uso tecnologia para resolver problemas e automatizar processos. 
-               <div className="text-emerald-700 font-bold">
+            <div className="text-neutral-600 text-base md:text-lg space-y-1">
+              <p>Uso tecnologia para resolver problemas e automatizar processos.</p>
+              <p className="text-emerald-700 font-bold">
                 Quer ver isso na prática ou conversar sobre um projeto?
-              </div>.
-              
-            </p>
+              </p>
+            </div>
 
             {/* Apenas 2 Botões Claros */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
