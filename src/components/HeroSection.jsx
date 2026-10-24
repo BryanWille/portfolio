@@ -11,7 +11,7 @@ import {
 import { profileData } from "@/data/profile";
 import CodeToValueBackground from "./CodeToValueBackground";
 
-export default function HeroSection() {
+export default function HeroSection({ id = "inicio" }) {
   const { links, email } = profileData;
 
   const photoSrc =
@@ -19,7 +19,7 @@ export default function HeroSection() {
 
   return (
     <section
-      id="inicio"
+      id={id}
       className="relative bg-[#FAFAFA] pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden"
     >
       {/* Animação de fundo sutil: Código se transformando em Valor */}
@@ -38,7 +38,7 @@ export default function HeroSection() {
 
             {/* Subtítulo principal enxuto */}
             <p className="text-xl md:text-2xl font-medium text-neutral-800 leading-snug">
-              Cientista da Computação e desenvolvedor numa das maiores consultorias do mundo. 
+              Cientista da Computação, Pós-graduando e líder técnico de desenvolvimento numa das maiores consultorias do mundo. 
               Acima de tudo, movido por{" "}
               <span className="text-emerald-700 font-bold">
                 fazer a diferença
@@ -66,7 +66,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#meus-projetos"
+                href="#projetos"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 bg-white px-7 py-4 text-base font-semibold text-neutral-800 shadow-sm transition-all hover:bg-neutral-50 hover:border-neutral-400"
               >
                 <span>Conhecer meus projetos</span>

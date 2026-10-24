@@ -369,6 +369,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#DCE7F5] bg-white px-6 py-4">
               <div className="flex flex-wrap items-center gap-2.5">
+                <img
+                  src="/projects/notecore/logo.png"
+                  alt="Notecore Logo"
+                  className="h-7 w-7 object-contain rounded-lg border border-[#DCE7F5] bg-white p-0.5"
+                />
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] tracking-tight">
                   Notecore
                 </h3>
@@ -1288,6 +1293,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#F2DEC8] bg-white px-6 py-4">
               <div className="flex flex-wrap items-center gap-2.5">
+                <img
+                  src="/projects/aws-s3/lambda.png"
+                  alt="AWS Lambda Logo"
+                  className="h-7 w-7 object-contain rounded-lg border border-[#F2DEC8] bg-[#FFF8F2] p-0.5"
+                />
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] tracking-tight">
                   Otimização Serverless AWS
                 </h3>
@@ -1606,6 +1616,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#DED4C7] bg-[#FFFCF7] px-6 py-4">
               <div className="flex items-center gap-3">
+                <img
+                  src="/projects/bookie/logo.png"
+                  alt="Bookie Logo"
+                  className="h-7 w-7 object-contain rounded-full border border-[#DED4C7]"
+                />
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#302720] tracking-tight">
                   Bookie
                 </h3>
@@ -1788,6 +1803,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#E2E8F0] bg-white px-6 py-4">
               <div className="flex items-center gap-3">
+                <img
+                  src="/projects/noobie/logo.png"
+                  alt="Noobie App Icon"
+                  className="h-8 w-8 sm:h-9 sm:w-9 rounded-xl border border-[#FF5B00]/30 shadow-sm object-contain bg-black flex-shrink-0"
+                />
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#14171F] tracking-tight">
                   Noobie
                 </h3>

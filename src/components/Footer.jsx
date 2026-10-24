@@ -145,34 +145,26 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="#trajetoria"
+                  className="text-neutral-600 hover:text-emerald-700 transition-colors"
+                >
+                  Trajetória
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projetos"
+                  className="text-neutral-600 hover:text-emerald-700 transition-colors"
+                >
+                  Projetos
+                </a>
+              </li>
+              <li>
+                <a
                   href="#sobre-mim"
                   className="text-neutral-600 hover:text-emerald-700 transition-colors"
                 >
                   Sobre mim
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#meus-projetos"
-                  className="text-neutral-600 hover:text-emerald-700 transition-colors"
-                >
-                  Meus Projetos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#experiencia"
-                  className="text-neutral-600 hover:text-emerald-700 transition-colors"
-                >
-                  Experiência
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#publicacoes"
-                  className="text-neutral-600 hover:text-emerald-700 transition-colors"
-                >
-                  Publicações
                 </a>
               </li>
             </ul>
