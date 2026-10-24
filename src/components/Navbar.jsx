@@ -5,10 +5,9 @@ import { MessageCircle, Menu, X, ArrowUpRight } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 const navLinks = [
+  { label: "Trajetória", href: "#trajetoria" },
+  { label: "Projetos", href: "#projetos" },
   { label: "Sobre mim", href: "#sobre-mim" },
-  { label: "Meus Projetos", href: "#meus-projetos" },
-  { label: "Experiência", href: "#experiencia" },
-  { label: "Publicações", href: "#publicacoes" },
 ];
 
 export default function Navbar() {
@@ -51,7 +50,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-emerald-700 hover:shadow-md"
             >
               <MessageCircle className="h-4 w-4" />
-              <span>WhatsApp</span>
+              <span>Conversar no WhatsApp ↗</span>
             </a>
           </div>
 
@@ -91,7 +90,7 @@ export default function Navbar() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 py-3 text-sm font-semibold text-white shadow-sm"
               >
                 <MessageCircle className="h-4 w-4" />
-                <span>Conversar no WhatsApp</span>
+                <span>Conversar no WhatsApp ↗</span>
               </a>
             </div>
           </nav>
