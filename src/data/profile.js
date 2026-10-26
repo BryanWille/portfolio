@@ -1,18 +1,21 @@
+const whatsappCommercialUrl =
+  "https://api.whatsapp.com/send?phone=5531998191723&text=Ol%C3%A1%2C%20Bryan!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.";
+
 export const profileData = {
   fullName: "Bryan Wille Souto Braga",
   name: "Bryan Wille",
   shortName: "Bryan Wille",
-  role: "Engenheiro de Software & Analista de Sistemas Pleno II",
+  role: "Engenharia de Soluções & Software",
   company: "Deloitte Consulting (Deloitte Touche Tohmatsu Limited)",
-  location: "Belo Horizonte, MG · Brasil",
+  location: "Belo Horizonte, MG · Atendimento Nacional & Remoto",
   email: "bryanelliw@gmail.com",
   phone: "+55 (31) 99819-1723",
   phoneRaw: "+5531998191723",
-  whatsappUrl: "https://api.whatsapp.com/send?phone=5531998191723",
+  whatsappUrl: whatsappCommercialUrl,
   photoUrl:
     "https://media.licdn.com/dms/image/v2/D4D03AQFNLkguL7Db-A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1706217771950?e=1794441600&v=beta&t=-Tnr_UeLln0R0Jxt3HA9BvE3KGPwCKiZrQM_MU-Nd8U",
   links: {
-    whatsapp: "https://api.whatsapp.com/send?phone=5531998191723",
+    whatsapp: whatsappCommercialUrl,
     linkedin: "https://www.linkedin.com/in/bryanwille/",
     github: "https://github.com/bryanwille",
     email: "mailto:bryanelliw@gmail.com",
@@ -20,61 +23,97 @@ export const profileData = {
     bookie: "https://bookie-lib.netlify.app/dashboard",
   },
   hero: {
-    badge: "Disponível para novos projetos & conexões • Belo Horizonte, MG",
-    greeting: "Prazer, eu sou Bryan Wille.",
+    badge: "DESENVOLVIMENTO WEB • AUTOMAÇÃO DE PROCESSOS • INTEGRAÇÃO DE APIS",
+    title:
+      "Falta de visibilidade, retrabalho manual ou sistemas que não se conversam?",
     subtitle:
-      "Engenheiro de Software, Analista de Sistemas na Deloitte e criador de produtos digitais. Transformo problemas complexos em aplicações reais — de plataformas SaaS em Next.js a arquiteturas corporativas e pipelines de IA/MLOps.",
+      "Sou Bryan Wille, Cientista da Computação e líder técnico na líder global de consultoria. Crio sites, automações e integrações sob medida para destravar a eficiência da sua equipe e transformar sua presença online.",
     ctas: {
       whatsapp: {
-        label: "Chamar no WhatsApp",
-        href: "https://api.whatsapp.com/send?phone=5531998191723",
+        label: "Iniciar Projeto via WhatsApp ↗",
+        href: whatsappCommercialUrl,
       },
-      products: {
-        label: "Ver meus produtos",
-        href: "#produtos",
+      solutions: {
+        label: "Ver Soluções na Prática ↓",
+        href: "#solucoes",
       },
     },
-    floatingBadges: [
-      { text: "Cientista da Computação", position: "top-left" },
-      { text: "Analista Pleno II @ Deloitte", position: "bottom-left" },
-      { text: "Pós em IA & MLOps", position: "top-right" },
-    ],
   },
-  bento: {
-    badge: "QUEM SOU EU ALÉM DO CÓDIGO",
-    title: "Engenharia orientada a produto, rigor técnico e disciplina diária.",
-    subtitle:
-      "Antes de olhar linhas de código ou histórico corporativo, entenda o que me move como desenvolvedor e criador.",
-    cards: [
-      {
-        id: "product-mindset",
-        tag: "01 · MENTALIDADE DE PRODUTO",
-        title: "Construo para resolver dores reais — a começar pelas minhas.",
-        description:
-          "Não programo apenas para fechar tarefas em uma sprint; penso como dono de produto do início ao fim. Gosto de conceber arquiteturas completas que atendam a necessidades legítimas. Foi dessa inquietação que criei o Noobie para gerir minhas finanças com projeção de saldo livre real e o Bookie para enriquecer minha biblioteca e reter reflexões literárias.",
-        quote: "O melhor software é aquele que resolve um problema concreto com simplicidade, robustez e elegância.",
-        chips: ["Visão de Produto", "Noobie FinTech", "Bookie Lib", "SaaS Full-Stack"],
-      },
-      {
-        id: "enterprise-ai",
-        tag: "02 · ESCALA CORPORATIVA + IA",
-        title: "Grandes ecossistemas na Deloitte e pesquisa de ponta na PUC Minas.",
-        description:
-          "No meu dia a dia na Deloitte Consulting, atuo na sustentação e evolução de plataformas corporativas críticas nos setores de Varejo, Saúde e Energia — onde estabilidade, segurança e conformidade são inegociáveis. Conecto essa experiência à pós-graduação em Engenharia de IA e MLOps na PUC Minas, aplicando orquestração de dados e pipelines preditivos em cenários de alta demanda.",
-        quote: "Unir governança corporativa de larga escala com agilidade na entrega de inteligência artificial aplicada.",
-        chips: ["Deloitte Pleno II", "Salesforce Apex/LWC", "PUC Minas", "MLOps Pipelines"],
-      },
-      {
-        id: "dna-interests",
-        tag: "03 · INTERESSES & DISCIPLINA",
-        title: "Literatura, finanças e a consistência da corrida.",
-        description:
-          "Minha rotina é movida por disciplina e curiosidade contínua. Encontro inspiração na leitura de obras clássicas e contemporâneas (a centelha que deu origem ao Bookie), estudo com afinco economia e mercado financeiro (alicerce do Noobie) e mantenho a corrida como pilar fundamental de foco mental e resiliência física.",
-        quote: "A consistência nos hábitos diários é o que sustenta entregas de engenharia de alto nível no longo prazo.",
-        chips: ["Literatura Ativa", "Mercado Financeiro", "Corrida & Disciplina", "Foco Contínuo"],
-      },
-    ],
-  },
+  solutions: [
+    {
+      id: "web-performance",
+      tag: "01 · PRESENÇA DIGITAL & CONVERSÃO",
+      title: "Sites & Aplicações Web de Alta Performance",
+      focus:
+        "Landing pages, sites institucionais, catálogos e portais corporativos.",
+      differential:
+        "Construção limpa em Next.js e Tailwind CSS, 95+ no Google PageSpeed, SEO técnico estruturado para buscas e 100% responsivo.",
+      chips: ["Next.js & React", "95+ PageSpeed", "SEO Técnico", "Responsividade Total"],
+    },
+    {
+      id: "process-automation",
+      tag: "02 · EFICIÊNCIA OPERACIONAL",
+      title: "Automação de Processos & Rotinas",
+      focus: "Eliminação de tarefas manuais e repetitivas da equipe.",
+      differential:
+        "Scripts serverless em nuvem (AWS Lambda), webhooks, disparos automáticos no WhatsApp/e-mail e processamento autônomo de arquivos/dados.",
+      chips: ["AWS Lambda", "Webhooks", "Bots & Alertas", "Processamento em Nuvem"],
+    },
+    {
+      id: "api-integration",
+      tag: "03 · ECOSSISTEMA CONECTADO",
+      title: "Integração de Sistemas & APIs",
+      focus:
+        "Conectar o site ou sistema da empresa aos softwares existentes (CRM, ERP, gateways de pagamento, emissão fiscal).",
+      differential:
+        "Arquitetura limpa, sincronização segura em tempo real e fim do retrabalho manual entre sistemas.",
+      chips: ["APIs REST", "Integração ERP/CRM", "Gateways de Pagamento", "Sincronização Real-Time"],
+    },
+    {
+      id: "custom-saas",
+      tag: "04 · PRODUTOS & GESTÃO INTERNA",
+      title: "Sistemas Web & SaaS Sob Medida",
+      focus:
+        "Painéis administrativos (dashboards), controle de clientes, pedidos e finanças.",
+      differential:
+        "Modelagem em banco de dados relacional (PostgreSQL/Supabase), autenticação robusta e regras de negócio escaláveis.",
+      chips: ["Dashboards & Painéis", "PostgreSQL / Supabase", "Autenticação Segura", "Arquitetura Escalável"],
+    },
+  ],
+  authority: [
+    {
+      id: "enterprise-rigor",
+      tag: "01 · PADRÃO CORPORATIVO",
+      title: "Rigor de Nível Enterprise",
+      description:
+        "Atuação e liderança técnica em consultoria global de primeira linha, aplicando boas práticas de arquitetura corporativa diretamente no projeto da sua empresa.",
+      highlight: "Liderança Técnica · Arquitetura Limpa",
+    },
+    {
+      id: "proven-efficiency",
+      tag: "02 · RESULTADOS AUDITÁVEIS",
+      title: "Economia e Eficiência Comprovadas",
+      description:
+        "Histórico auditável de otimização de infraestrutura (-87,89% em custos de armazenamento na nuvem) e redução de tempo operacional (-20% de TMA em processos de atendimento).",
+      highlight: "-87,89% Custo Cloud · -20% TMA Operacional",
+    },
+    {
+      id: "engineering-foundation",
+      tag: "03 · SEGURANÇA & ESCALABILIDADE",
+      title: "Base Sólida de Engenharia",
+      description:
+        "Formação em Ciência da Computação e especialização em Engenharia de IA/MLOps: garantia de software escalável, banco de dados bem desenhado e segurança técnica contra falhas e invasões.",
+      highlight: "Ciência da Computação · Pós em IA & MLOps",
+    },
+    {
+      id: "consultative-profile",
+      tag: "04 · PARCERIA TRANSPARENTE",
+      title: "Comunicação Direta & Perfil Consultivo",
+      description:
+        "Nível de inglês C1 e experiência com stakeholders corporativos: alinhamento claro de escopo, prazos transparentes e código documentado. Sem jargões confusos e sem abandono de projeto.",
+      highlight: "Escopo Claro · Prazos Reais · Inglês C1",
+    },
+  ],
   education: [
     {
       institution: "Pontifícia Universidade Católica de Minas Gerais (PUC Minas)",
@@ -91,38 +130,6 @@ export const profileData = {
       status: "Concluído",
       description:
         "Formação sólida em algoritmos, estruturas de dados clássicas, teoria dos grafos, compressão sem perdas (LZW/PGM), programação orientada a objetos e matemática computacional.",
-    },
-  ],
-  certifications: [
-    {
-      title: "Certificado EF SET Inglês — C1 Proficiência Eficaz (Advanced)",
-      issuer: "EF Standard English Test (EF SET)",
-      date: "Janeiro 2026",
-      featured: true,
-    },
-    {
-      title: "AWS Academy Cloud Foundations",
-      issuer: "Dom Helder",
-      date: "Concluído",
-      featured: false,
-    },
-    {
-      title: "Introdução à I.A. e Machine Learning (Java)",
-      issuer: "Dom Helder",
-      date: "Concluído",
-      featured: false,
-    },
-    {
-      title: "Programação Orientada a Objetos (Java)",
-      issuer: "Dom Helder",
-      date: "Concluído",
-      featured: false,
-    },
-    {
-      title: "Análise de Dados com Microsoft Power BI",
-      issuer: "Dom Helder",
-      date: "Concluído",
-      featured: false,
     },
   ],
 };

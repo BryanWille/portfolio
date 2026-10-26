@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, Menu, X, ArrowUpRight } from "lucide-react";
+import { MessageCircle, Menu, X } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 const navLinks = [
-  { label: "Trajetória", href: "#trajetoria" },
+  { label: "Soluções", href: "#solucoes" },
   { label: "Projetos", href: "#projetos" },
-  { label: "Sobre mim", href: "#sobre-mim" },
+  { label: "Por Que Eu?", href: "#autoridade" },
+  { label: "Contato", href: "#contato" },
 ];
 
 export default function Navbar() {
@@ -17,18 +18,26 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-all">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-18 items-center justify-between py-4">
-          {/* Esquerda: Apenas Bryan Wille limpo */}
+          {/* Esquerda: Identidade Comercial */}
           <a
             href="#inicio"
-            className="text-lg font-bold tracking-tight text-neutral-900 hover:text-emerald-700 transition-colors"
+            className="flex items-center gap-2.5 group transition-colors"
           >
-            Bryan Wille
+            <span className="text-lg font-bold tracking-tight text-neutral-900 group-hover:text-emerald-700 transition-colors">
+              Bryan Wille
+            </span>
+            <span className="hidden sm:inline-block text-neutral-300 font-light">
+              |
+            </span>
+            <span className="hidden sm:inline-block text-xs font-medium text-neutral-500 tracking-tight">
+              Engenharia de Soluções &amp; Software
+            </span>
           </a>
 
-          {/* Centro: Links simples e humanos */}
+          {/* Centro: Links de Navegação B2B */}
           <nav
             aria-label="Navegação Principal"
-            className="hidden md:flex items-center gap-8"
+            className="hidden md:flex items-center gap-7"
           >
             {navLinks.map((link) => (
               <a
@@ -41,7 +50,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Direita: Botão WhatsApp limpo e claro */}
+          {/* Direita: Botão CTA Comercial */}
           <div className="hidden md:flex items-center">
             <a
               href={profileData.whatsappUrl}
@@ -50,7 +59,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-emerald-700 hover:shadow-md"
             >
               <MessageCircle className="h-4 w-4" />
-              <span>Conversar no WhatsApp ↗</span>
+              <span>Solicitar Orçamento ↗</span>
             </a>
           </div>
 
@@ -71,6 +80,11 @@ export default function Navbar() {
       {/* Menu Mobile */}
       {mobileMenuOpen && (
         <div className="border-b border-neutral-100 bg-white px-4 pt-3 pb-6 md:hidden">
+          <div className="mb-3 pb-2 border-b border-neutral-100">
+            <span className="text-xs font-medium text-neutral-500">
+              Engenharia de Soluções &amp; Software
+            </span>
+          </div>
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
@@ -90,7 +104,7 @@ export default function Navbar() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 py-3 text-sm font-semibold text-white shadow-sm"
               >
                 <MessageCircle className="h-4 w-4" />
-                <span>Conversar no WhatsApp ↗</span>
+                <span>Solicitar Orçamento ↗</span>
               </a>
             </div>
           </nav>
