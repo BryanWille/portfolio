@@ -24,14 +24,14 @@ export default function CarouselHeader({
             projectId
           )}`}
         >
-          Projetos &amp; Criações
+          Portfólio de Engenharia &amp; Produtos
         </span>
         <h2
           className={`mt-1 text-2xl sm:text-3xl font-extrabold transition-colors duration-500 ${getSectionTitleColor(
             projectId
           )}`}
         >
-          Produtos que eu construí e coloquei no ar
+          Sistemas, plataformas e automações em produção
         </h2>
       </div>
 
@@ -66,4 +66,3 @@ export default function CarouselHeader({
     </div>
   );
 }
-

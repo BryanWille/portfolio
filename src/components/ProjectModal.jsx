@@ -83,7 +83,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   BR-381 Risk Pipeline
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-bold bg-[#000D4B]/10 text-[#000D4B] border border-[#000D4B]/20">
-                  Engenharia de Dados &amp; IA • PUC Minas
+                  {project.simpleBadge || "Engenharia de Dados & IA/MLOps"}
                 </span>
                 <span className="rounded-full px-2.5 py-0.5 text-xs font-bold bg-[#FFC900]/25 text-[#735700] border border-[#FFC900]/60">
                   Status: Funcional 🚨
@@ -133,7 +133,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#000D4B]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#000D4B]">
-                      Propósito &amp; Arquitetura
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 
@@ -378,10 +378,10 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   Notecore
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-bold bg-[#1E88E5]/10 text-[#1E88E5] border border-[#1E88E5]/20">
-                  Mobile App • Flutter &amp; Firebase
+                  {project.simpleBadge || "App Mobile & Sincronização Cloud"}
                 </span>
                 <span className="rounded-full px-2.5 py-0.5 text-xs font-bold bg-[#F1F5F9] text-[#475569] border border-[#DCE7F5]">
-                  Graduação Dom Helder Câmara
+                  Flutter &amp; Firebase
                 </span>
               </div>
 
@@ -428,7 +428,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#1E88E5]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#1E88E5]">
-                      Propósito &amp; Conceito
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 
@@ -688,10 +688,10 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   Medusa Bot
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-bold bg-[#00979D]/10 text-[#00979D] border border-[#00979D]/20">
-                  IoT &amp; Visão Computacional • C++ &amp; ESP32
+                  {project.simpleBadge || "IoT & Visão Computacional"}
                 </span>
                 <span className="rounded-full px-2.5 py-0.5 text-xs font-bold bg-[#F1F5F9] text-[#475569] border border-[#D1EAEB]">
-                  Hardware &amp; IA
+                  C++ &amp; Cloud Vision API
                 </span>
               </div>
 
@@ -738,7 +738,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#00979D]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#00979D]">
-                      Propósito &amp; Inovação
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 
@@ -985,7 +985,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   Presp
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-bold bg-[#007396]/10 text-[#007396] border border-[#007396]/20">
-                  Desktop Software (Java)
+                  {project.simpleBadge || "Software Desktop & Algoritmos"}
                 </span>
                 <span className="rounded-full px-2.5 py-0.5 text-xs font-bold bg-[#F1F5F9] text-[#475569] border border-[#D8E2ED]">
                   Estatística &amp; POO
@@ -1035,21 +1035,20 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#007396]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#007396]">
-                      O Problema &amp; A Ideia
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 
                   <h4 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] tracking-tight">
-                    Por que desenvolvemos o Presp?
+                    {activeScreen?.title || "Engenharia de Algoritmos, POO & Processamento Matemático em Java"}
                   </h4>
 
                   <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[#475569]">
-                    <p className="text-[#0F172A]/85">
-                      Durante as aulas práticas de probabilidade e estatística, calcular manualmente distribuições de frequência, separatrizes e desvios para conjuntos com centenas de dados brutos era extremamente lento e suscetível a erros de arredondamento.
-                    </p>
-                    <p className="text-[#0F172A]/85">
-                      Para resolver esse gargalo operacional, desenvolvemos o Presp: uma aplicação desktop robusta em Java puro que faz toda a ingestão, ordenação, geração de classes e cálculo de métricas estatísticas em milissegundos, com confiabilidade matemática absoluta e sem exigir internet ou APIs de IA.
-                    </p>
+                    {activeScreen?.storyParagraphs?.map((paragraph, pIdx) => (
+                      <p key={pIdx} className="text-[#0F172A]/85">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
 
                   {/* 3 Pilares do Projeto */}
@@ -1302,10 +1301,10 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   Otimização Serverless AWS
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-bold bg-[#FF9900]/12 text-[#D97706] border border-[#FF9900]/25">
-                  Cloud &amp; Serverless • AWS S3 &amp; Lambda
+                  {project.simpleBadge || "Automação Cloud & Eficiência"}
                 </span>
                 <span className="rounded-full px-2.5 py-0.5 text-xs font-bold bg-[#F1F5F9] text-[#232F3E] border border-[#E2E8F0]">
-                  Case Corporativo • Loja do Sapo
+                  AWS Lambda &amp; S3 • -87,89% Custo
                 </span>
               </div>
 
@@ -1352,21 +1351,20 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#D97706]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#D97706]">
-                      O Problema &amp; A Ideia
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 
                   <h4 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] tracking-tight">
-                    Resolvendo Gargalo de Custo e Armazenamento em Nuvem
+                    {activeScreen?.title || "Arquitetura Serverless para Redução de Custos em ERP Corporativo"}
                   </h4>
 
                   <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[#475569]">
-                    <p className="text-[#0F172A]/85">
-                      Na Loja do Sapo, as fotos dos checklists técnicos dos aparelhos estavam consumindo grande parte da franquia de armazenamento do ERP (Zoho), elevando os custos de operação.
-                    </p>
-                    <p className="text-[#0F172A]/85">
-                      Para resolver isso de forma escalável e econômica, desenhamos e implementamos uma solução serverless na AWS: integramos o Zoho a uma função Lambda em Python que faz o download da imagem via requisição HTTP, compacta o arquivo com a biblioteca Pillow (PIL) reduzindo peso sem perder legibilidade e persiste com segurança em um bucket S3, atualizando o link de volta no ERP.
-                    </p>
+                    {activeScreen?.storyParagraphs?.map((paragraph, pIdx) => (
+                      <p key={pIdx} className="text-[#0F172A]/85">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
 
                   {/* 3 Pilares do Projeto */}
@@ -1625,7 +1623,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   Bookie
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-semibold bg-[#F3E2D6] text-[#9C452B] border border-[#9C452B]/20">
-                  SaaS • Gestão Literária &amp; Reflexões
+                  {project.simpleBadge || "Aplicação Web & Consumo de APIs"}
                 </span>
               </div>
 
@@ -1670,7 +1668,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#9C452B]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#9C452B]">
-                      A História por Trás
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 
@@ -1812,7 +1810,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   Noobie
                 </h3>
                 <span className="rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(255,91,0,0.10)] text-[#FF5B00] border border-[#FF5B00]/20">
-                  Gestão Financeira &amp; Patrimônio
+                  {project.simpleBadge || "Plataforma Web & SaaS"}
                 </span>
               </div>
 
@@ -1857,7 +1855,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       <Sparkles className="h-5 w-5 text-[#FF5B00]" />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
-                      A História por Trás
+                      Desafio de Negócio &amp; Arquitetura
                     </span>
                   </div>
 

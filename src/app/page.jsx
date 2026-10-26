@@ -13,9 +13,9 @@ export default function HomePage() {
       <Navbar />
       <main className="flex-1">
         <HeroSection id="inicio" />
-        <ExperienceSection id="trajetoria" />
+        <ExperienceSection id="solucoes" />
         <ProjectsCarousel id="projetos" />
-        <AboutBentoSection id="sobre-mim" />
+        <AboutBentoSection id="autoridade" />
       </main>
       <Footer />
       <WhatsAppFloatingButton />

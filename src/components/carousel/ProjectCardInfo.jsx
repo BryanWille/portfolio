@@ -21,13 +21,13 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
   const isPresp = project.id === "presp";
   const isAws = project.id === "aws-s3";
 
-  // Badges
+  // Badges com termos de mercado
   const renderBadges = () => {
     if (isBr381) {
       return (
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#000D4B]/10 text-[#000D4B] border border-[#000D4B]/20">
-            Engenharia de Dados &amp; IA • PUC Minas
+            {project.simpleBadge || "Engenharia de Dados & IA/MLOps"}
           </span>
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#FFC900]/25 text-[#735700] border border-[#FFC900]/60">
             Status: Funcional 🚨
@@ -40,10 +40,10 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
       return (
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#1E88E5]/10 text-[#1E88E5] border border-[#1E88E5]/20">
-            Mobile App • Flutter &amp; Firebase
+            {project.simpleBadge || "App Mobile & Sincronização Cloud"}
           </span>
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#F1F5F9] text-[#475569] border border-[#DCE7F5]">
-            Graduação Dom Helder Câmara
+            Flutter &amp; Firebase
           </span>
         </div>
       );
@@ -53,10 +53,10 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
       return (
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#00979D]/10 text-[#00979D] border border-[#00979D]/20">
-            IoT &amp; Visão Computacional • C++ &amp; ESP32
+            {project.simpleBadge || "IoT & Visão Computacional"}
           </span>
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#F1F5F9] text-[#475569] border border-[#D1EAEB]">
-            Hardware &amp; IA
+            C++ &amp; Cloud Vision API
           </span>
         </div>
       );
@@ -66,10 +66,10 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
       return (
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#007396]/10 text-[#007396] border border-[#007396]/20">
-            Software Desktop • Java &amp; POO
+            {project.simpleBadge || "Software Desktop & Algoritmos"}
           </span>
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#F1F5F9] text-[#475569] border border-[#D8E2ED]">
-            Estatística Descritiva
+            Java &amp; POO
           </span>
         </div>
       );
@@ -79,10 +79,10 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
       return (
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#FF9900]/12 text-[#D97706] border border-[#FF9900]/25">
-            Cloud &amp; Serverless • AWS S3 &amp; Lambda
+            {project.simpleBadge || "Automação Cloud & Eficiência"}
           </span>
           <span className="inline-block rounded-full px-3 py-1 text-xs font-bold bg-[#F1F5F9] text-[#232F3E] border border-[#E2E8F0]">
-            Case Corporativo • Loja do Sapo
+            AWS Lambda &amp; S3 • -87,89% Custo
           </span>
         </div>
       );
@@ -99,7 +99,7 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
               : "bg-emerald-100 text-emerald-800"
           }`}
         >
-          {project.simpleBadge || "Gestão Financeira & Patrimônio"}
+          {project.simpleBadge || "Plataforma Web & SaaS"}
         </span>
       </div>
     );
@@ -294,4 +294,3 @@ export default function ProjectCardInfo({ project, onOpenDetails }) {
     </div>
   );
 }
-

@@ -14,13 +14,13 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Bryan Wille | Engenharia de Software, Sistemas & IA",
+  title: "Bryan Wille | Engenharia de Soluções, Sites & Sistemas Sob Medida",
   description:
-    "Bryan Wille — Analista de Sistemas Pleno II na Deloitte, Cientista da Computação e pós-graduando em Engenharia de IA e MLOps.",
+    "Desenvolvimento web de alta performance, automação de processos, integração de APIs e sistemas sob medida com rigor de engenharia corporativa.",
   openGraph: {
-    title: "Bryan Wille | Engenharia de Software, Sistemas & IA",
+    title: "Bryan Wille | Engenharia de Soluções & Software",
     description:
-      "Produtos digitais, sistemas corporativos e engenharia de dados aplicada.",
+      "Sites ultrarrápidos, automações em nuvem, integrações de APIs e sistemas web sob medida para a sua operação.",
     type: "website",
     locale: "pt_BR",
   },
@@ -28,7 +28,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body className={`${inter.variable} ${jetBrainsMono.variable}`}>
         {children}
       </body>
