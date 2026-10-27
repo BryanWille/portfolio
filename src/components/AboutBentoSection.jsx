@@ -5,249 +5,237 @@ import {
   ShieldCheck,
   TrendingDown,
   GraduationCap,
-  MessageSquare,
-  Wrench,
-  BookOpen,
-  Compass,
-  Gamepad2,
-  Award,
+  Lock,
+  Building2,
+  Check,
+  X,
 } from "lucide-react";
 
+const comparisonRows = [
+  {
+    commonMarket: "Templates pesados e vulneráveis",
+    engineeringStandard: "Código sob medida, rápido e com segurança nativa.",
+  },
+  {
+    commonMarket: "Automações e integrações frágeis",
+    engineeringStandard:
+      "Arquitetura corporativa estável com redução real de custos.",
+  },
+  {
+    commonMarket: "Atrasos e sumiço na comunicação",
+    engineeringStandard:
+      "Postura de liderança técnica: escopo claro, transparência e prazos cumpridos.",
+  },
+];
+
 export default function AboutBentoSection({ id = "autoridade" }) {
-  const authorityCards = [
-    {
-      id: "enterprise-rigor",
-      icon: ShieldCheck,
-      iconColor: "text-blue-700",
-      iconBg: "bg-blue-50 border-blue-200/80",
-      pillBadge: "bg-blue-50 text-blue-800 border-blue-200/80",
-      dotColor: "bg-blue-600",
-      tag: "01 · PADRÃO CORPORATIVO",
-      title: "Rigor de Nível Enterprise",
-      text: "Atuação e liderança técnica em consultoria global de primeira linha, aplicando boas práticas de arquitetura corporativa diretamente no projeto da sua empresa.",
-      footerHighlight: "Liderança Técnica · Deloitte Consulting",
-      hoverBorder: "hover:border-blue-400/50",
-    },
-    {
-      id: "proven-efficiency",
-      icon: TrendingDown,
-      iconColor: "text-emerald-700",
-      iconBg: "bg-emerald-50 border-emerald-200/80",
-      pillBadge: "bg-emerald-50 text-emerald-800 border-emerald-200/80",
-      dotColor: "bg-emerald-600",
-      tag: "02 · RESULTADOS AUDITÁVEIS",
-      title: "Economia e Eficiência Comprovadas",
-      text: "Histórico auditável de otimização de infraestrutura (-87,89% em custos de armazenamento na nuvem) e redução de tempo operacional (-20% de TMA em processos de atendimento).",
-      footerHighlight: "-87,89% Custo Cloud · -20% TMA Operacional",
-      hoverBorder: "hover:border-emerald-400/50",
-    },
-    {
-      id: "engineering-foundation",
-      icon: GraduationCap,
-      iconColor: "text-indigo-700",
-      iconBg: "bg-indigo-50 border-indigo-200/80",
-      pillBadge: "bg-indigo-50 text-indigo-800 border-indigo-200/80",
-      dotColor: "bg-indigo-600",
-      tag: "03 · SEGURANÇA & ESCALABILIDADE",
-      title: "Base Sólida de Engenharia",
-      text: "Formação em Ciência da Computação e especialização em Engenharia de IA/MLOps: garantia de software escalável, banco de dados bem desenhado e segurança técnica contra falhas e invasões.",
-      footerHighlight: "Ciência da Computação · Pós IA & MLOps (PUC)",
-      hoverBorder: "hover:border-indigo-400/50",
-    },
-    {
-      id: "consultative-profile",
-      icon: MessageSquare,
-      iconColor: "text-amber-700",
-      iconBg: "bg-amber-50 border-amber-200/80",
-      pillBadge: "bg-amber-50 text-amber-900 border-amber-200/80",
-      dotColor: "bg-amber-500",
-      tag: "04 · PARCERIA TRANSPARENTE",
-      title: "Comunicação Direta & Perfil Consultivo",
-      text: "Nível de inglês C1 e experiência com stakeholders corporativos: alinhamento claro de escopo, prazos transparentes e código documentado. Sem jargões confusos e sem abandono de projeto.",
-      footerHighlight: "Escopo Claro · Código Documentado · Inglês C1",
-      hoverBorder: "hover:border-amber-400/50",
-    },
-  ];
-
-  const personalCards = [
-    {
-      id: "curiosidade",
-      icon: Wrench,
-      iconColor: "text-amber-600",
-      iconBg: "bg-amber-50 border-amber-200/80",
-      pillBadge: "bg-amber-100/60 text-amber-900 border-amber-200/80",
-      dotColor: "bg-amber-500",
-      tag: "Sede de Aprender",
-      title: "Curiosidade que não cabe numa gaveta",
-      text: "Fascinado por entender como as coisas funcionam por baixo do capô: da engenharia de um motor automotivo à precisão de máquinas, da estrutura musical à astronomia.",
-      footerHighlight: "Mecânica · Música · Astronomia",
-      hoverBorder: "hover:border-amber-400/50",
-    },
-    {
-      id: "leitura",
-      icon: BookOpen,
-      iconColor: "text-[#9C452B]",
-      iconBg: "bg-[#F6F1E9] border-[#DED4C7]",
-      pillBadge: "bg-[#F3E2D6] text-[#302720] border-[#DED4C7]",
-      dotColor: "bg-[#9C452B]",
-      tag: "Repertório & Páginas",
-      title: "O hábito diário da leitura",
-      text: "De clássicos da literatura mundial a livros de psicologia comportamental e mercado financeiro — entendendo como pessoas tomam decisões e como mercados evoluem.",
-      footerHighlight: "Literatura · Psicologia · Finanças",
-      hoverBorder: "hover:border-[#9C452B]/40",
-    },
-    {
-      id: "viagens",
-      icon: Compass,
-      iconColor: "text-sky-600",
-      iconBg: "bg-sky-50 border-sky-200/80",
-      pillBadge: "bg-sky-100/60 text-sky-900 border-sky-200/80",
-      dotColor: "bg-sky-500",
-      tag: "Estrada & Conexão",
-      title: "Conhecer o mundo com quem importa",
-      text: "Fora das telas, minha prioridade é pegar a estrada ao lado da minha namorada: descobrir cidades novas, subir montanhas, curtir cachoeiras e colecionar boas histórias.",
-      footerHighlight: "Viagens · Natureza · Parceria",
-      hoverBorder: "hover:border-sky-400/50",
-    },
-    {
-      id: "descompressao",
-      icon: Gamepad2,
-      iconColor: "text-emerald-600",
-      iconBg: "bg-emerald-50 border-emerald-200/80",
-      pillBadge: "bg-emerald-100/60 text-emerald-900 border-emerald-200/80",
-      dotColor: "bg-emerald-500",
-      tag: "Descompressão & Foco",
-      title: "Risadas com amigos e disciplina",
-      text: "Partidas de tabuleiro e jogos com amigos para descontrair, combinadas com corrida consistente e treino diário na academia para manter a mente focada.",
-      footerHighlight: "Jogos com Amigos · Corrida & Treino",
-      hoverBorder: "hover:border-emerald-400/50",
-    },
-  ];
-
   return (
     <section
       id={id}
-      className="scroll-mt-16 bg-[#FAFAFA] py-16 sm:py-24 border-b border-neutral-200/70 relative overflow-hidden"
+      className="scroll-mt-16 bg-[#FAFAFA] py-20 sm:py-24 border-b border-slate-200/80 relative overflow-hidden"
     >
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-20">
-        {/* BLOCO 1: AUTORIDADE TÉCNICA & GARANTIA DE QUALIDADE */}
-        <div>
-          <div className="mb-12 max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-700 border border-blue-200/60 mb-3">
-              <Award className="h-3.5 w-3.5" />
-              <span>Por Que Contratar Minha Engenharia?</span>
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
-              Autoridade técnica e garantia de entrega sem riscos.
-            </h2>
-            <p className="mt-3 text-base sm:text-lg text-[#475569] leading-relaxed">
-              Minha bagagem acadêmica e atuação em grandes operações corporativas funcionam como o selo de segurança para que o seu projeto nasça rápido, blindado e pronto para crescer.
-            </p>
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* 1. CABEÇALHO DA SEÇÃO */}
+        <div className="mb-12 max-w-3xl">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800 border border-emerald-200/70 mb-3">
+            <ShieldCheck className="h-3.5 w-3.5" />
+            <span>DIFERENCIAL DE ENGENHARIA</span>
+          </span>
+
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+            Por que confiar a tecnologia da sua empresa{" "}
+            <span className="text-emerald-700">a mim?</span>
+          </h2>
+
+          <p className="mt-3 text-base sm:text-lg text-[#475569] leading-relaxed">
+            Porque aplico no seu negócio o mesmo padrão que uso em consultoria global e no meio acadêmico: código limpo, foco em segurança e arquitetura pensada para a sua empresa crescer sem dores de cabeça.
+          </p>
+        </div>
+
+        {/* 2. BENTO GRID DE CREDENCIAIS (ASSIMETRIA MODERNA) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+          {/* Card 1: Ocupa 2 colunas — Destaque Liderança Deloitte */}
+          <div className="md:col-span-2 lg:col-span-2 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs hover:shadow-md hover:border-blue-300/70 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between gap-3 mb-5">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-blue-800 border border-blue-200/70">
+                  PADRÃO ENTERPRISE
+                </span>
+
+                <div className="h-11 w-11 rounded-xl border border-blue-200/80 bg-blue-50 text-blue-700 flex items-center justify-center shadow-2xs shrink-0">
+                  <Building2 className="h-5 w-5" />
+                </div>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mb-3 tracking-tight leading-snug">
+                Arquitetura corporativa e rigor de grandes marcas
+              </h3>
+
+              <p className="text-sm sm:text-base leading-relaxed text-[#475569]">
+                Atuo como líder técnico em uma das maiores consultorias do mundo (Deloitte), desenhando arquiteturas de software para operações de alta escala. O código do seu site ou sistema nasce com o mesmo padrão de segurança, estabilidade e qualidade exigido pelas grandes marcas.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700">
+                <span className="h-2 w-2 rounded-full bg-blue-600" />
+                <span>Liderança Técnica Corporativa · Deloitte</span>
+              </div>
+              <span className="text-[11px] font-mono font-semibold text-blue-700 bg-blue-50/80 px-2.5 py-0.5 rounded-md border border-blue-200/60">
+                Enterprise Grade
+              </span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {authorityCards.map((card) => {
-              const IconComponent = card.icon;
-              return (
-                <div
-                  key={card.id}
-                  className={`rounded-2xl border border-neutral-200/90 bg-white p-6 sm:p-7 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between hover:scale-[1.01] ${card.hoverBorder}`}
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <div
-                        className={`h-11 w-11 rounded-xl border flex items-center justify-center shadow-2xs ${card.iconBg} ${card.iconColor}`}
-                      >
-                        <IconComponent className="h-5 w-5" />
-                      </div>
-                      <span className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
-                        {card.tag}
-                      </span>
-                    </div>
-
-                    <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] mb-3 tracking-tight">
-                      {card.title}
-                    </h3>
-
-                    <p className="text-sm leading-relaxed text-[#475569]">
-                      {card.text}
-                    </p>
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-neutral-100">
-                    <span
-                      className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-[11px] font-semibold border ${card.pillBadge}`}
-                    >
-                      <span
-                        className={`h-1.5 w-1.5 rounded-full ${card.dotColor}`}
-                      />
-                      <span>{card.footerHighlight}</span>
-                    </span>
-                  </div>
+          {/* Card 2: 1 coluna — Métrica Financeira */}
+          <div className="md:col-span-1 lg:col-span-1 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-emerald-300/70 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between gap-2 mb-5">
+                <div className="h-10 w-10 rounded-xl border border-emerald-200/80 bg-emerald-50 text-emerald-700 flex items-center justify-center shadow-2xs">
+                  <TrendingDown className="h-5 w-5" />
                 </div>
-              );
-            })}
+                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+                  EFICIÊNCIA REAL
+                </span>
+              </div>
+
+              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-600 tracking-tight mb-2">
+                -87,89%
+              </div>
+
+              <h3 className="text-lg font-bold text-[#0F172A] mb-2.5 tracking-tight">
+                Custo de nuvem reduzido
+              </h3>
+
+              <p className="text-sm leading-relaxed text-[#475569]">
+                Engenharia focada em eficiência. Soluções que rodam consumindo o mínimo de servidor, eliminando desperdícios de infraestrutura.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-100">
+              <span className="text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                Otimização de infraestrutura
+              </span>
+            </div>
+          </div>
+
+          {/* Card 3: 1 coluna — Formação & Pós-graduação */}
+          <div className="md:col-span-1 lg:col-span-1 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-indigo-300/70 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between gap-2 mb-5">
+                <span className="inline-flex items-center rounded-full bg-indigo-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-indigo-800 border border-indigo-200/70">
+                  BASE SÓLIDA
+                </span>
+
+                <div className="h-10 w-10 rounded-xl border border-indigo-200/80 bg-indigo-50 text-indigo-700 flex items-center justify-center shadow-2xs shrink-0">
+                  <GraduationCap className="h-5 w-5" />
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-[#0F172A] mb-2.5 tracking-tight leading-snug">
+                Ciência da Computação &amp; Pós-Graduação
+              </h3>
+
+              <p className="text-sm leading-relaxed text-[#475569]">
+                Formação sólida e especialização acadêmica contínua. Modelagem de dados consistente e arquitetura feita para durar anos sem quebrar.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-100">
+              <span className="text-xs font-semibold text-indigo-800 flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
+                Rigor acadêmico e técnico
+              </span>
+            </div>
+          </div>
+
+          {/* Card 4: Ocupa largura restante (2 colunas no tablet / 4 colunas no desktop) — Segurança & Alinhamento */}
+          <div className="md:col-span-2 lg:col-span-4 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs hover:shadow-md hover:border-emerald-300/70 transition-all duration-300">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              <div className="max-w-3xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-xl border border-emerald-200/80 bg-emerald-50 text-emerald-700 flex items-center justify-center shadow-2xs shrink-0">
+                    <Lock className="h-5 w-5" />
+                  </div>
+
+                  <span className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-800 border border-emerald-200/70">
+                    SITES SEGUROS &amp; COMUNICAÇÃO
+                  </span>
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mb-2.5 tracking-tight">
+                  Aplicações blindadas e alinhamento transparente
+                </h3>
+
+                <p className="text-sm sm:text-base leading-relaxed text-[#475569]">
+                  Proteção contra vulnerabilidades comuns da web, código moderno e contato direto com quem desenvolve. Prazos reais, sem intermediários e sem surpresas no cronograma.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap lg:flex-col gap-2.5 shrink-0 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-8">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 border border-slate-200/80 px-3.5 py-2 text-xs font-semibold text-slate-800">
+                  <Check className="h-4 w-4 text-emerald-600 shrink-0 stroke-[2.5]" />
+                  <span>Proteção e código blindado</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 border border-slate-200/80 px-3.5 py-2 text-xs font-semibold text-slate-800">
+                  <Check className="h-4 w-4 text-emerald-600 shrink-0 stroke-[2.5]" />
+                  <span>Contato direto sem intermediários</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 border border-slate-200/80 px-3.5 py-2 text-xs font-semibold text-slate-800">
+                  <Check className="h-4 w-4 text-emerald-600 shrink-0 stroke-[2.5]" />
+                  <span>Cronograma e escopo cumpridos</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* BLOCO 2: BENTO GRID DE FACETAS PESSOAIS (COMPACTO E CLEAN) */}
-        <div id="sobre-mim" className="pt-8 border-t border-neutral-200/70">
-          <div className="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <span className="inline-block rounded-full bg-neutral-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-neutral-600 border border-neutral-200 mb-2">
-                Quem sou eu além do código
+        {/* 3. TABELA COMPARATIVA MINIMALISTA (ABAIXO DO GRID) */}
+        <div className="rounded-2xl border border-slate-200/90 bg-white shadow-xs overflow-hidden">
+          {/* Cabeçalho da Tabela */}
+          <div className="grid grid-cols-1 md:grid-cols-2 border-b border-slate-200 bg-slate-50/80">
+            <div className="px-6 py-4 flex items-center gap-2.5 text-xs sm:text-sm font-bold text-slate-500">
+              <span className="h-5 w-5 rounded-full bg-slate-200/80 text-slate-500 flex items-center justify-center shrink-0">
+                <X className="h-3.5 w-3.5 stroke-[2.5]" />
               </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] tracking-tight">
-                Por trás da engenharia: curiosidade, disciplina e vida real.
-              </h3>
+              <span>
+                O que o mercado comum entrega (amadores/agências genéricas)
+              </span>
             </div>
-            <p className="text-xs sm:text-sm text-[#64748B] italic">
-              &ldquo;A consistência nos hábitos diários sustenta entregas técnicas de alto nível.&rdquo;
-            </p>
+
+            <div className="px-6 py-4 flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#0F172A] border-t md:border-t-0 md:border-l border-slate-200 bg-emerald-50/40">
+              <span className="h-5 w-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                <Check className="h-3.5 w-3.5 stroke-[2.5]" />
+              </span>
+              <span>Meu padrão de engenharia &amp; entrega</span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {personalCards.map((card) => {
-              const IconComponent = card.icon;
-              return (
-                <div
-                  key={card.id}
-                  className={`rounded-2xl border border-neutral-200/80 bg-white/90 p-5 shadow-2xs hover:shadow-sm transition-all duration-300 flex flex-col justify-between ${card.hoverBorder}`}
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3.5">
-                      <div
-                        className={`h-9 w-9 rounded-xl border flex items-center justify-center ${card.iconBg} ${card.iconColor}`}
-                      >
-                        <IconComponent className="h-4 w-4" />
-                      </div>
-                      <span className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
-                        {card.tag}
-                      </span>
-                    </div>
-
-                    <h4 className="text-base font-bold text-[#0F172A] mb-2 tracking-tight">
-                      {card.title}
-                    </h4>
-
-                    <p className="text-xs sm:text-sm leading-relaxed text-[#475569]">
-                      {card.text}
-                    </p>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-neutral-100">
-                    <span
-                      className={`inline-flex items-center gap-1.5 rounded-lg px-2 py-0.5 text-[11px] font-semibold border ${card.pillBadge}`}
-                    >
-                      <span
-                        className={`h-1.5 w-1.5 rounded-full ${card.dotColor}`}
-                      />
-                      <span>{card.footerHighlight}</span>
-                    </span>
-                  </div>
+          {/* Linhas Comparativas */}
+          <div className="divide-y divide-slate-200/80">
+            {comparisonRows.map((row, idx) => (
+              <div
+                key={idx}
+                className="grid grid-cols-1 md:grid-cols-2 transition-colors hover:bg-slate-50/40"
+              >
+                {/* Coluna 1: Mercado Comum */}
+                <div className="px-6 py-4 sm:py-5 flex items-start gap-3 text-sm sm:text-base text-slate-500">
+                  <span className="mt-0.5 h-5 w-5 rounded-full bg-rose-50 border border-rose-200/70 text-rose-500 flex items-center justify-center shrink-0">
+                    <X className="h-3 w-3 stroke-[2.5]" />
+                  </span>
+                  <span>{row.commonMarket}</span>
                 </div>
-              );
-            })}
+
+                {/* Coluna 2: Meu Padrão de Engenharia */}
+                <div className="px-6 py-4 sm:py-5 flex items-start gap-3 text-sm sm:text-base font-semibold text-[#0F172A] border-t md:border-t-0 md:border-l border-slate-200/80 bg-emerald-50/15">
+                  <span className="mt-0.5 h-5 w-5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center shrink-0">
+                    <Check className="h-3.5 w-3.5 stroke-[2.5]" />
+                  </span>
+                  <span>{row.engineeringStandard}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
