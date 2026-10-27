@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 const navLinks = [
@@ -15,51 +15,51 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-all">
+    <header className="sticky top-0 z-50 w-full bg-[#FAFAF9]/85 backdrop-blur-md border-b border-slate-200/60 transition-colors">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-18 items-center justify-between py-4">
-          {/* Esquerda: Identidade Comercial */}
+        <div className="flex h-16 items-center justify-between">
+          {/* Esquerda: Identidade Tipográfica Editorial */}
           <a
             href="#inicio"
-            className="flex items-center gap-2.5 group transition-colors"
+            className="flex items-baseline gap-3 group transition-colors"
           >
-            <span className="text-lg font-bold tracking-tight text-neutral-900 group-hover:text-emerald-700 transition-colors">
+            <span className="font-display text-base font-bold tracking-tight text-slate-900 group-hover:text-[#064E3B] transition-colors">
               Bryan Wille
             </span>
-            <span className="hidden sm:inline-block text-neutral-300 font-light">
-              |
+            <span className="hidden sm:inline-block text-slate-300 font-light">
+              /
             </span>
-            <span className="hidden sm:inline-block text-xs font-medium text-neutral-500 tracking-tight">
-              Engenharia de Soluções &amp; Software
+            <span className="hidden sm:inline-block font-mono text-[11px] uppercase tracking-wider text-slate-500">
+              Engenharia de Software
             </span>
           </a>
 
-          {/* Centro: Links de Navegação B2B */}
+          {/* Centro: Links de Navegação Limpos */}
           <nav
             aria-label="Navegação Principal"
-            className="hidden md:flex items-center gap-7"
+            className="hidden md:flex items-center gap-8"
           >
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Direita: Botão CTA Comercial */}
+          {/* Direita: Botão CTA em Verde Floresta Profundo */}
           <div className="hidden md:flex items-center">
             <a
               href={profileData.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-emerald-700 hover:shadow-md"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#064E3B] px-4 py-2 text-xs font-semibold tracking-wide text-white shadow-editorial transition-all hover:bg-[#04392B]"
             >
-              <MessageCircle className="h-4 w-4" />
-              <span>Solicitar Orçamento ↗</span>
+              <span>Solicitar Orçamento</span>
+              <span className="font-mono text-white/75">↗</span>
             </a>
           </div>
 
@@ -69,9 +69,13 @@ export default function Navbar() {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Abrir menu"
-              className="rounded-lg p-2 text-neutral-700 hover:bg-neutral-100"
+              className="rounded-lg p-2 text-slate-700 hover:bg-slate-200/50"
             >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {mobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </button>
           </div>
         </div>
@@ -79,9 +83,9 @@ export default function Navbar() {
 
       {/* Menu Mobile */}
       {mobileMenuOpen && (
-        <div className="border-b border-neutral-100 bg-white px-4 pt-3 pb-6 md:hidden">
-          <div className="mb-3 pb-2 border-b border-neutral-100">
-            <span className="text-xs font-medium text-neutral-500">
+        <div className="border-b border-slate-200/60 bg-[#FAFAF9] px-4 pt-3 pb-6 md:hidden">
+          <div className="mb-3 pb-2 border-b border-slate-200/60">
+            <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
               Engenharia de Soluções &amp; Software
             </span>
           </div>
@@ -91,7 +95,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-neutral-800 hover:text-emerald-700 py-1"
+                className="text-base font-medium text-slate-800 hover:text-[#064E3B] py-1"
               >
                 {link.label}
               </a>
@@ -101,9 +105,8 @@ export default function Navbar() {
                 href={profileData.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 py-3 text-sm font-semibold text-white shadow-sm"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#064E3B] py-3 text-sm font-semibold text-white"
               >
-                <MessageCircle className="h-4 w-4" />
                 <span>Solicitar Orçamento ↗</span>
               </a>
             </div>

@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   getSectionTagColor,
   getSectionTitleColor,
-  getNavButtonStyle,
   getCounterColor,
 } from "./carouselThemes";
 
@@ -17,17 +16,17 @@ export default function CarouselHeader({
   onNext,
 }) {
   return (
-    <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+    <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
       <div>
         <span
-          className={`text-xs font-bold uppercase tracking-wider transition-colors duration-500 ${getSectionTagColor(
+          className={`block font-mono text-xs uppercase tracking-wider mb-3 transition-colors duration-500 ${getSectionTagColor(
             projectId
           )}`}
         >
-          Portfólio de Engenharia &amp; Produtos
+          02 // Portfólio de Engenharia &amp; Produtos
         </span>
         <h2
-          className={`mt-1 text-2xl sm:text-3xl font-extrabold transition-colors duration-500 ${getSectionTitleColor(
+          className={`font-display text-3xl sm:text-5xl font-bold tracking-tight leading-[1.1] transition-colors duration-500 ${getSectionTitleColor(
             projectId
           )}`}
         >
@@ -35,32 +34,33 @@ export default function CarouselHeader({
         </h2>
       </div>
 
-      {/* Controles de Navegação */}
-      <div className="flex items-center gap-2">
+      {/* Controles de Navegação Alinhados na Mesma Linha Horizontal */}
+      <div className="flex items-center gap-2 shrink-0">
         <button
+          type="button"
           onClick={onPrev}
           aria-label="Projeto anterior"
-          className={`flex h-11 w-11 items-center justify-center rounded-full border shadow-sm transition-all active:scale-95 ${getNavButtonStyle(
-            projectId
-          )}`}
+          className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-800 bg-white/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 transition-colors active:scale-95"
         >
-          <ChevronLeft className="h-5 w-5" />
+          <ChevronLeft className="h-4 w-4" />
         </button>
+
         <span
-          className={`text-xs font-semibold px-2 font-mono transition-colors duration-500 ${getCounterColor(
+          className={`whitespace-nowrap font-mono text-xs tracking-wider min-w-[3.5rem] text-center select-none font-semibold transition-colors duration-500 ${getCounterColor(
             projectId
           )}`}
         >
-          {currentIndex + 1} de {total}
+          {String(currentIndex + 1).padStart(2, "0")} /{" "}
+          {String(total).padStart(2, "0")}
         </span>
+
         <button
+          type="button"
           onClick={onNext}
           aria-label="Próximo projeto"
-          className={`flex h-11 w-11 items-center justify-center rounded-full border shadow-sm transition-all active:scale-95 ${getNavButtonStyle(
-            projectId
-          )}`}
+          className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-800 bg-white/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 transition-colors active:scale-95"
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-4 w-4" />
         </button>
       </div>
     </div>

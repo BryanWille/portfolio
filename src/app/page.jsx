@@ -9,7 +9,7 @@ import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-[#111827]">
+    <div className="min-h-screen flex flex-col bg-[#FAFAF9] text-slate-900 selection:bg-slate-200 selection:text-[#064E3B]">
       <Navbar />
       <main className="flex-1">
         <HeroSection id="inicio" />

@@ -1,27 +1,21 @@
 "use client";
 
 import React from "react";
-import {
-  ShieldCheck,
-  TrendingDown,
-  GraduationCap,
-  Lock,
-  Building2,
-  Check,
-  X,
-} from "lucide-react";
 
 const comparisonRows = [
   {
+    index: "01",
     commonMarket: "Templates pesados e vulneráveis",
     engineeringStandard: "Código sob medida, rápido e com segurança nativa.",
   },
   {
+    index: "02",
     commonMarket: "Automações e integrações frágeis",
     engineeringStandard:
       "Arquitetura corporativa estável com redução real de custos.",
   },
   {
+    index: "03",
     commonMarket: "Atrasos e sumiço na comunicação",
     engineeringStandard:
       "Postura de liderança técnica: escopo claro, transparência e prazos cumpridos.",
@@ -32,205 +26,179 @@ export default function AboutBentoSection({ id = "autoridade" }) {
   return (
     <section
       id={id}
-      className="scroll-mt-16 bg-[#FAFAFA] py-20 sm:py-24 border-b border-slate-200/80 relative overflow-hidden"
+      className="scroll-mt-16 bg-[#FAFAF9] py-24 sm:py-32 border-t border-slate-200/60 relative overflow-hidden"
     >
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* 1. CABEÇALHO DA SEÇÃO */}
-        <div className="mb-12 max-w-3xl">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800 border border-emerald-200/70 mb-3">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            <span>DIFERENCIAL DE ENGENHARIA</span>
+        {/* 1. CABEÇALHO EDITORIAL DA SEÇÃO */}
+        <div className="mb-16 max-w-3xl">
+          <span className="block font-mono text-xs tracking-wider uppercase text-slate-500 mb-3">
+            03 // DIFERENCIAL DE ENGENHARIA
           </span>
 
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+          <h2 className="font-display text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
             Por que confiar a tecnologia da sua empresa{" "}
-            <span className="text-emerald-700">a mim?</span>
+            <span className="text-[#064E3B]">a mim?</span>
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-[#475569] leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             Porque aplico no seu negócio o mesmo padrão que uso em consultoria global e no meio acadêmico: código limpo, foco em segurança e arquitetura pensada para a sua empresa crescer sem dores de cabeça.
           </p>
         </div>
 
         {/* 2. BENTO GRID DE CREDENCIAIS (ASSIMETRIA MODERNA) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
           {/* Card 1: Ocupa 2 colunas — Destaque Liderança Deloitte */}
-          <div className="md:col-span-2 lg:col-span-2 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs hover:shadow-md hover:border-blue-300/70 transition-all duration-300 flex flex-col justify-between">
+          <div className="md:col-span-2 lg:col-span-2 rounded-2xl border border-slate-200/80 bg-white/95 p-7 sm:p-9 shadow-editorial hover:border-slate-300 transition-colors flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between gap-3 mb-5">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-blue-800 border border-blue-200/70">
+              <div className="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-200/60">
+                <span className="font-mono text-xs tracking-wider uppercase text-slate-500">
                   PADRÃO ENTERPRISE
                 </span>
-
-                <div className="h-11 w-11 rounded-xl border border-blue-200/80 bg-blue-50 text-blue-700 flex items-center justify-center shadow-2xs shrink-0">
-                  <Building2 className="h-5 w-5" />
-                </div>
+                <span className="font-mono text-xs text-[#064E3B] font-semibold">
+                  DELOITTE CONSULTING
+                </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mb-3 tracking-tight leading-snug">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight leading-[1.15]">
                 Arquitetura corporativa e rigor de grandes marcas
               </h3>
 
-              <p className="text-sm sm:text-base leading-relaxed text-[#475569]">
+              <p className="text-sm sm:text-base leading-relaxed text-slate-600">
                 Atuo como líder técnico em uma das maiores consultorias do mundo (Deloitte), desenhando arquiteturas de software para operações de alta escala. O código do seu site ou sistema nasce com o mesmo padrão de segurança, estabilidade e qualidade exigido pelas grandes marcas.
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700">
-                <span className="h-2 w-2 rounded-full bg-blue-600" />
-                <span>Liderança Técnica Corporativa · Deloitte</span>
-              </div>
-              <span className="text-[11px] font-mono font-semibold text-blue-700 bg-blue-50/80 px-2.5 py-0.5 rounded-md border border-blue-200/60">
-                Enterprise Grade
-              </span>
+            <div className="mt-8 pt-4 border-t border-slate-200/60 flex items-center justify-between gap-2 font-mono text-xs text-slate-500">
+              <span>Liderança Técnica Corporativa</span>
+              <span className="text-slate-900 font-medium">Alta Escala</span>
             </div>
           </div>
 
           {/* Card 2: 1 coluna — Métrica Financeira */}
-          <div className="md:col-span-1 lg:col-span-1 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-emerald-300/70 transition-all duration-300 flex flex-col justify-between">
+          <div className="md:col-span-1 lg:col-span-1 rounded-2xl border border-slate-200/80 bg-white/95 p-7 sm:p-8 shadow-editorial hover:border-slate-300 transition-colors flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between gap-2 mb-5">
-                <div className="h-10 w-10 rounded-xl border border-emerald-200/80 bg-emerald-50 text-emerald-700 flex items-center justify-center shadow-2xs">
-                  <TrendingDown className="h-5 w-5" />
-                </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+              <div className="pb-4 mb-5 border-b border-slate-200/60">
+                <span className="font-mono text-xs tracking-wider uppercase text-slate-500">
                   EFICIÊNCIA REAL
                 </span>
               </div>
 
-              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-600 tracking-tight mb-2">
+              <div className="font-display text-4xl sm:text-5xl font-bold text-[#064E3B] tracking-tight leading-none mb-3">
                 -87,89%
               </div>
 
-              <h3 className="text-lg font-bold text-[#0F172A] mb-2.5 tracking-tight">
+              <h3 className="font-display text-lg font-bold text-slate-900 mb-2.5 tracking-tight leading-[1.15]">
                 Custo de nuvem reduzido
               </h3>
 
-              <p className="text-sm leading-relaxed text-[#475569]">
+              <p className="text-sm leading-relaxed text-slate-600">
                 Engenharia focada em eficiência. Soluções que rodam consumindo o mínimo de servidor, eliminando desperdícios de infraestrutura.
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-100">
-              <span className="text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
-                Otimização de infraestrutura
-              </span>
+            <div className="mt-8 pt-4 border-t border-slate-200/60 font-mono text-xs text-slate-500">
+              AWS Serverless Architecture
             </div>
           </div>
 
           {/* Card 3: 1 coluna — Formação & Pós-graduação */}
-          <div className="md:col-span-1 lg:col-span-1 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-indigo-300/70 transition-all duration-300 flex flex-col justify-between">
+          <div className="md:col-span-1 lg:col-span-1 rounded-2xl border border-slate-200/80 bg-white/95 p-7 sm:p-8 shadow-editorial hover:border-slate-300 transition-colors flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between gap-2 mb-5">
-                <span className="inline-flex items-center rounded-full bg-indigo-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-indigo-800 border border-indigo-200/70">
+              <div className="pb-4 mb-5 border-b border-slate-200/60">
+                <span className="font-mono text-xs tracking-wider uppercase text-slate-500">
                   BASE SÓLIDA
                 </span>
-
-                <div className="h-10 w-10 rounded-xl border border-indigo-200/80 bg-indigo-50 text-indigo-700 flex items-center justify-center shadow-2xs shrink-0">
-                  <GraduationCap className="h-5 w-5" />
-                </div>
               </div>
 
-              <h3 className="text-lg font-bold text-[#0F172A] mb-2.5 tracking-tight leading-snug">
+              <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900 mb-3 tracking-tight leading-[1.15]">
                 Ciência da Computação &amp; Pós-Graduação
               </h3>
 
-              <p className="text-sm leading-relaxed text-[#475569]">
+              <p className="text-sm leading-relaxed text-slate-600">
                 Formação sólida e especialização acadêmica contínua. Modelagem de dados consistente e arquitetura feita para durar anos sem quebrar.
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-100">
-              <span className="text-xs font-semibold text-indigo-800 flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
-                Rigor acadêmico e técnico
-              </span>
+            <div className="mt-8 pt-4 border-t border-slate-200/60 font-mono text-xs text-slate-500">
+              Bacharelado &amp; Especialização PUC
             </div>
           </div>
 
-          {/* Card 4: Ocupa largura restante (2 colunas no tablet / 4 colunas no desktop) — Segurança & Alinhamento */}
-          <div className="md:col-span-2 lg:col-span-4 rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs hover:shadow-md hover:border-emerald-300/70 transition-all duration-300">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-              <div className="max-w-3xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-10 w-10 rounded-xl border border-emerald-200/80 bg-emerald-50 text-emerald-700 flex items-center justify-center shadow-2xs shrink-0">
-                    <Lock className="h-5 w-5" />
-                  </div>
+          {/* Card 4: Largura restante (2 cols no tablet / 4 cols no desktop) — Segurança & Alinhamento */}
+          <div className="md:col-span-2 lg:col-span-4 rounded-2xl border border-slate-200/80 bg-white/95 p-7 sm:p-9 shadow-editorial hover:border-slate-300 transition-colors">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-center">
+              <div className="lg:col-span-7">
+                <span className="block font-mono text-xs tracking-wider uppercase text-slate-500 mb-3">
+                  SITES SEGUROS &amp; COMUNICAÇÃO
+                </span>
 
-                  <span className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-800 border border-emerald-200/70">
-                    SITES SEGUROS &amp; COMUNICAÇÃO
-                  </span>
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mb-2.5 tracking-tight">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight leading-[1.15]">
                   Aplicações blindadas e alinhamento transparente
                 </h3>
 
-                <p className="text-sm sm:text-base leading-relaxed text-[#475569]">
+                <p className="text-sm sm:text-base leading-relaxed text-slate-600">
                   Proteção contra vulnerabilidades comuns da web, código moderno e contato direto com quem desenvolve. Prazos reais, sem intermediários e sem surpresas no cronograma.
                 </p>
               </div>
 
-              <div className="flex flex-wrap lg:flex-col gap-2.5 shrink-0 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-8">
-                <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 border border-slate-200/80 px-3.5 py-2 text-xs font-semibold text-slate-800">
-                  <Check className="h-4 w-4 text-emerald-600 shrink-0 stroke-[2.5]" />
-                  <span>Proteção e código blindado</span>
+              <div className="lg:col-span-5 divide-y divide-slate-200/60 border-t lg:border-t-0 lg:border-l border-slate-200/60 pt-5 lg:pt-0 lg:pl-8">
+                <div className="py-2.5 first:pt-0 flex items-baseline justify-between gap-4">
+                  <span className="font-mono text-xs text-slate-400">01</span>
+                  <span className="text-sm font-medium text-slate-800 flex-1">
+                    Proteção nativa e código blindado
+                  </span>
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 border border-slate-200/80 px-3.5 py-2 text-xs font-semibold text-slate-800">
-                  <Check className="h-4 w-4 text-emerald-600 shrink-0 stroke-[2.5]" />
-                  <span>Contato direto sem intermediários</span>
+                <div className="py-2.5 flex items-baseline justify-between gap-4">
+                  <span className="font-mono text-xs text-slate-400">02</span>
+                  <span className="text-sm font-medium text-slate-800 flex-1">
+                    Contato direto sem intermediários
+                  </span>
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 border border-slate-200/80 px-3.5 py-2 text-xs font-semibold text-slate-800">
-                  <Check className="h-4 w-4 text-emerald-600 shrink-0 stroke-[2.5]" />
-                  <span>Cronograma e escopo cumpridos</span>
+                <div className="py-2.5 last:pb-0 flex items-baseline justify-between gap-4">
+                  <span className="font-mono text-xs text-slate-400">03</span>
+                  <span className="text-sm font-medium text-slate-800 flex-1">
+                    Cronograma e escopo cumpridos
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 3. TABELA COMPARATIVA MINIMALISTA (ABAIXO DO GRID) */}
-        <div className="rounded-2xl border border-slate-200/90 bg-white shadow-xs overflow-hidden">
-          {/* Cabeçalho da Tabela */}
-          <div className="grid grid-cols-1 md:grid-cols-2 border-b border-slate-200 bg-slate-50/80">
-            <div className="px-6 py-4 flex items-center gap-2.5 text-xs sm:text-sm font-bold text-slate-500">
-              <span className="h-5 w-5 rounded-full bg-slate-200/80 text-slate-500 flex items-center justify-center shrink-0">
-                <X className="h-3.5 w-3.5 stroke-[2.5]" />
-              </span>
-              <span>
-                O que o mercado comum entrega (amadores/agências genéricas)
-              </span>
+        {/* 3. TABELA COMPARATIVA EDITORIAL (SEM CARD-MANIA, PURA LINHA FINA SUÍÇA) */}
+        <div className="pt-4">
+          {/* Cabeçalho da Tabela Editorial */}
+          <div className="grid grid-cols-1 md:grid-cols-12 pb-4 border-b border-slate-300/80 gap-4">
+            <div className="md:col-span-6 font-mono text-xs tracking-wider uppercase text-slate-500">
+              O que o mercado comum entrega (amadores/agências genéricas)
             </div>
 
-            <div className="px-6 py-4 flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#0F172A] border-t md:border-t-0 md:border-l border-slate-200 bg-emerald-50/40">
-              <span className="h-5 w-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
-                <Check className="h-3.5 w-3.5 stroke-[2.5]" />
-              </span>
-              <span>Meu padrão de engenharia &amp; entrega</span>
+            <div className="md:col-span-6 md:pl-8 font-mono text-xs tracking-wider uppercase text-[#064E3B] font-semibold">
+              Meu padrão de engenharia &amp; entrega
             </div>
           </div>
 
-          {/* Linhas Comparativas */}
-          <div className="divide-y divide-slate-200/80">
-            {comparisonRows.map((row, idx) => (
+          {/* Linhas Comparativas com Divisórias Ultrafinas */}
+          <div className="divide-y divide-slate-200/60 border-b border-slate-200/60">
+            {comparisonRows.map((row) => (
               <div
-                key={idx}
-                className="grid grid-cols-1 md:grid-cols-2 transition-colors hover:bg-slate-50/40"
+                key={row.index}
+                className="grid grid-cols-1 md:grid-cols-12 py-6 gap-4 md:gap-0 items-baseline"
               >
                 {/* Coluna 1: Mercado Comum */}
-                <div className="px-6 py-4 sm:py-5 flex items-start gap-3 text-sm sm:text-base text-slate-500">
-                  <span className="mt-0.5 h-5 w-5 rounded-full bg-rose-50 border border-rose-200/70 text-rose-500 flex items-center justify-center shrink-0">
-                    <X className="h-3 w-3 stroke-[2.5]" />
+                <div className="md:col-span-6 flex items-baseline gap-4 pr-6 text-sm sm:text-base text-slate-500">
+                  <span className="font-mono text-xs text-slate-400 shrink-0">
+                    {row.index}
                   </span>
-                  <span>{row.commonMarket}</span>
+                  <span className="line-through decoration-slate-300/80">
+                    {row.commonMarket}
+                  </span>
                 </div>
 
                 {/* Coluna 2: Meu Padrão de Engenharia */}
-                <div className="px-6 py-4 sm:py-5 flex items-start gap-3 text-sm sm:text-base font-semibold text-[#0F172A] border-t md:border-t-0 md:border-l border-slate-200/80 bg-emerald-50/15">
-                  <span className="mt-0.5 h-5 w-5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center shrink-0">
-                    <Check className="h-3.5 w-3.5 stroke-[2.5]" />
+                <div className="md:col-span-6 md:border-l md:border-slate-200/60 md:pl-8 flex items-baseline gap-3 text-sm sm:text-base font-medium text-slate-900">
+                  <span className="font-mono text-xs text-[#064E3B] shrink-0">
+                    →
                   </span>
                   <span>{row.engineeringStandard}</span>
                 </div>
